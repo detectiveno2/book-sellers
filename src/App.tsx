@@ -1,58 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useState } from 'react'
+import { useAppDispatch, useAppSelector } from './states/hooks'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+import './App.css'
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+} from './states/actions/counter.action'
+
+interface IState {
+  input: string
 }
 
-export default App;
+const App: React.FC = () => {
+  const [input, setInput] = useState<IState['input']>('')
+  const dispatch = useAppDispatch()
+  const counter = useAppSelector(state => state.counter)
+
+  const handleDecrementClick = () => {
+    dispatch(decrement())
+  }
+
+  const handleIncrementClick = () => {
+    dispatch(increment())
+  }
+
+  const handleIncrementByAmountClick = () => {
+    dispatch(incrementByAmount(parseInt(input)))
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value)
+  }
+
+  return (
+    <div className='App'>
+      <div>
+        <span>{counter.value}</span>
+      </div>
+      <button onClick={handleDecrementClick}>-</button>
+      <button onClick={handleIncrementClick}>+</button>
+      <input type='text' name='amount' value={input} onChange={handleChange} />
+      <button onClick={handleIncrementByAmountClick}>add by amount</button>
+    </div>
+  )
+}
+
+export default App
