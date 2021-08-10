@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useAppDispatch, useAppSelector } from './states/hooks'
 
-import './App.css'
+import './App.scss'
 import {
   decrement,
   increment,
