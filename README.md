@@ -4,7 +4,7 @@ Front-end part of book sellers project.
 
 ## Description
 
-This is a conversation web application built using [ReactJS](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [Redux Toolkit](https://redux-toolkit.js.org/).
+This is a trading-book web application built using [ReactJS](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [Redux Toolkit](https://redux-toolkit.js.org/).
 
 ## Installation
 
