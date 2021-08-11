@@ -1,0 +1,59 @@
+@import '../abstracts/variables';
+
+// font-size
+$sizes: 10, 11, 12, 13, 14, 16, 20, 22, 28;
+
+@each $size in $sizes {
+  .size-#{$size} {
+    font-size: #{$size}px;
+  }
+}
+
+// typo
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('../../assets/fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../../assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../../assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+.font-light {
+  font-family: 'Montserrat-Light', sans-serif;
+}
+
+.font-bold {
+  font-family: 'Montserrat-SemiBold', sans-serif;
+}
+
+// colors
+.color-mine-shaft {
+  color: $cl_mine-shaft;
+}
+
+.color-gray {
+  color: $cl_gray;
+}
+
+.color-alabaster {
+  color: $cl_alabaster;
+}
+
+.color-azure-radiance {
+  color: $cl_azure-radiance;
+}
+
+.color-silver {
+  color: $cl_silver;
+}
+
+.color-amaranth {
+  color: $cl_amaranth;
+}
