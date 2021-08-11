@@ -1,0 +1,13 @@
+@import '../../styles/app.scss';
+
+.primary-btn {
+  border: none;
+  border-radius: 4px;
+  background-color: $cl_azure-radiance;
+
+  cursor: pointer;
+  padding: 5px 9px;
+
+  color: $cl_white;
+  font-size: 14px;
+}

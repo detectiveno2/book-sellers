@@ -7,6 +7,7 @@ import {
   increment,
   incrementByAmount,
 } from './states/actions/counter.action'
+import PrimaryButton from './components/PrimaryButton/PrimaryButton'
 
 interface IState {
   input: string
@@ -43,6 +44,7 @@ const App: React.FC = () => {
       <button onClick={handleIncrementClick}>+</button>
       <input type='text' name='amount' value={input} onChange={handleChange} />
       <button onClick={handleIncrementByAmountClick}>add by amount</button>
+      <PrimaryButton text='Click Me' handleClick={handleIncrementClick} />
     </div>
   )
 }
