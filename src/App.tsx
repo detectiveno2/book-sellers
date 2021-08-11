@@ -35,6 +35,7 @@ const App: React.FC = () => {
 
   return (
     <div className='App'>
+      <span className='font-bold size-20 cl_amaranth'>test font</span>
       <div>
         <span>{counter.value}</span>
       </div>
