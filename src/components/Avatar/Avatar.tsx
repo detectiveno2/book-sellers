@@ -1,12 +1,12 @@
 import './Avatar.scss'
 
-interface IProps {
+interface IAvatarProps {
   src: string
   alt?: string
   diameter?: number
 }
 
-const Avatar: React.FC<IProps> = ({ src, alt, diameter }) => {
+const Avatar: React.FC<IAvatarProps> = ({ src, alt, diameter }) => {
   return (
     <div
       style={{
