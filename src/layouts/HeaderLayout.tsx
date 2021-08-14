@@ -1,4 +1,4 @@
-import { Header } from '../components'
+import { Header, Container } from '../components'
 import './HeaderLayout.scss'
 
 interface IHeaderLayoutProps {
@@ -9,9 +9,13 @@ const HeaderLayout: React.FC<IHeaderLayoutProps> = ({ children }) => {
   return (
     <div className='header-layout'>
       <div className='header-wrapper'>
-        <Header />
+        <Container>
+          <Header />
+        </Container>
       </div>
-      <div className='header-layout__content-wrapper'>{children}</div>
+      <div className='header-layout__content-wrapper'>
+        <Container>{children}</Container>
+      </div>
     </div>
   )
 }

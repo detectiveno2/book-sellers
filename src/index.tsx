@@ -6,11 +6,14 @@ import * as serviceWorker from './serviceWorker'
 import { Provider } from 'react-redux'
 import store from './states/store'
 import './styles/app.scss'
+import HeaderLayout from './layouts/HeaderLayout'
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <HeaderLayout>
+        <App />
+      </HeaderLayout>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
