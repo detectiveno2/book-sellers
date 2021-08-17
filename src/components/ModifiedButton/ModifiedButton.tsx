@@ -6,7 +6,7 @@ interface IModifiedButtonProps {
   activeIcon: React.ElementType
   disableIcon: React.ElementType
   condition: boolean
-  handleClick: HandleClick
+  handleClick?: HandleClick
 }
 
 const ModifiedButton: React.FC<IModifiedButtonProps> = ({
