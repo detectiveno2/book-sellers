@@ -9,7 +9,7 @@ import {
 import { Avatar, ModifiedButton, PrimaryButton } from '../../components'
 
 import './Test.scss'
-import { LikeActiveIcon, LikeIcon } from '../../assets/svgs'
+import { ActivedLikeIcon, LikeIcon } from '../../assets/svgs'
 
 interface IState {
   input: string
@@ -72,7 +72,7 @@ const Test: React.FC = () => {
       <div>
         <a href='#'>
           <ModifiedButton
-            activeIcon={LikeActiveIcon}
+            activeIcon={ActivedLikeIcon}
             disableIcon={LikeIcon}
             condition={testModifiedBtn}
             handleClick={handleTestModifiedBtnClick}
