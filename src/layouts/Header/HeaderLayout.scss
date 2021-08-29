@@ -1,0 +1,12 @@
+@import '../../styles/app.scss';
+
+.header-layout {
+  .header-wrapper {
+    border-bottom: solid 1px $cl_alto;
+  }
+
+  .header-layout__content-wrapper {
+    background-color: $cl_alabaster;
+    min-height: 100vh;
+  }
+}
